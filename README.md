@@ -48,8 +48,5 @@ packet-sniffer
 ```
 
 ## Example Output
-
-![Example Output](assets/example.png)
-=======
 ![Example Output](assets/example.png)
 (Upgrade packet sniffer with interface listing, protocol filtering, stats summary, CSV and PCAP export)
