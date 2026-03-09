@@ -49,8 +49,7 @@ packet-sniffer
 
 ## Example Output
 
-<<<<<<< HEAD
 ![Example Output](assets/example.png)
 =======
 ![Example Output](assets/example.png)
->>>>>>> 2ac6203 (Upgrade packet sniffer with interface listing, protocol filtering, stats summary, CSV and PCAP export)
+(Upgrade packet sniffer with interface listing, protocol filtering, stats summary, CSV and PCAP export)
