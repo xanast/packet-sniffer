@@ -16,10 +16,27 @@ def parse_packet(packet):
         return None
 
     ip_layer = packet[IP]
+    protocol = detect_protocol(packet)
 
     return {
         "src_ip": ip_layer.src,
         "dst_ip": ip_layer.dst,
-        "protocol": detect_protocol(packet),
+        "protocol": protocol,
         "length": len(packet),
     }
+
+
+def matches_protocol_filter(packet, protocol_filter):
+    if protocol_filter is None or protocol_filter.lower() == "all":
+        return True
+
+    protocol_filter = protocol_filter.lower()
+
+    if protocol_filter == "tcp" and packet.haslayer(TCP):
+        return True
+    if protocol_filter == "udp" and packet.haslayer(UDP):
+        return True
+    if protocol_filter == "icmp" and packet.haslayer(ICMP):
+        return True
+
+    return False
