@@ -37,5 +37,8 @@ packet-sniffer
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
+
+## Example Output
 
 ![Example Output](assets/example.png)
